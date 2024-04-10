@@ -1,4 +1,5 @@
 import { Locator, Page, expect } from "@playwright/test"
+import Strings from "../core/strings";
 
 export default class FlightResultsPage {
 
@@ -21,7 +22,7 @@ export default class FlightResultsPage {
     }
 
     async verifyThereAreNoFlights() {
-        await expect(this.noFlightsLabel).toContainText("We can't find flights departing today");
+        await expect(this.noFlightsLabel).toContainText(Strings.noFlightsMessage);
     }
 
     async verifyThereAreFlightResults() {
@@ -41,7 +42,7 @@ export default class FlightResultsPage {
     }
 
     async verifyFirstClassFlight() {
-        await expect(this.flightClassInfo).toContainText('First Class');
+        await expect(this.flightClassInfo).toContainText(Strings.firstClass);
     }
 
 }

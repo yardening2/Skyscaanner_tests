@@ -1,4 +1,5 @@
 import { Locator, Page, expect } from "@playwright/test"
+import Strings from "../core/strings";
 
 export default class HomePage {
 
@@ -102,7 +103,7 @@ export default class HomePage {
     async selectFirstClass() {
         await expect(async () => {
             await this.travlerelsInput.click();
-            await this.classDropdown.selectOption('First Class');
+            await this.classDropdown.selectOption(Strings.firstClass);
         }).toPass();
     }
 

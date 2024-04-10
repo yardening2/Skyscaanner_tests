@@ -3,7 +3,9 @@
 ## Steps to run the tests:
 
 * Prerequisites: npm, node
-* Run test: npx playwright test
+* Install Playwright and browsers: npx playwright install
+* Install packages: npm install
+* Run tests: npx playwright test
 
 ## HTML report
 
